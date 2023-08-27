@@ -16,6 +16,13 @@ public class ArrayUtils
         return(mid);
     }
 
+    public int getMidIndex(int si, int ei){
+        int size        =   ei - si + 1;
+        int size_1      =   size - 1;
+        int mid         =   si + (size_1/2);
+        return(mid);
+    }
+
     public void printArray( int a[]){
         int n = a.length;
         for(int i=0; i<n; i++)
@@ -24,7 +31,7 @@ public class ArrayUtils
         }
     }
 
-    public int [] reverseArray(int a[]){
+    public int [] reverseFullArray(int a[]){
         int mid = getArrayMidIndex(a);
         int lastIndex = a.length - 1;
         for(int i=0; i<=mid; i++)
@@ -34,7 +41,19 @@ public class ArrayUtils
         }
 
         return(a);
-    }    
+    } 
+    
+    public int [] reverseArray(int a[], int si, int ei){
+        int mid = getArrayMidIndex(a);
+        int lastIndex = a.length - 1;
+        for(int i=0; i<=mid; i++)
+        {
+            int j = lastIndex - i;
+            swapArrayItems(a, i, j);
+        }
+
+        return(a);
+    }  
 }
 
 /*
