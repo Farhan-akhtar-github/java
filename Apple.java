@@ -1,11 +1,10 @@
-import task.DigitCount;
+import task.ArrayUtils;
 
 public class Apple 
 {
     public static void main(String[] args) {
-        DigitCount obj = new DigitCount();
-        int r = obj.count(261);
-        System.out.println(r);
+        ArrayUtils obj = new ArrayUtils();
+        obj.reverseArray(obj.sample);
     }
     
 }
