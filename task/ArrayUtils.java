@@ -24,7 +24,7 @@ public class ArrayUtils
         }
     }
 
-    public void reverseArray(int a[]){
+    public int [] reverseArray(int a[]){
         int mid = getArrayMidIndex(a);
         int lastIndex = a.length - 1;
         for(int i=0; i<=mid; i++)
@@ -32,7 +32,8 @@ public class ArrayUtils
             int j = lastIndex - i;
             swapArrayItems(a, i, j);
         }
-        printArray(a);
+
+        return(a);
     }    
 }
 
