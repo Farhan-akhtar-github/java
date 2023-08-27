@@ -6,6 +6,7 @@ public class Apple
         ArrayUtils obj = new ArrayUtils();
         int t = obj.getMidIndex(3, 6);
         System.out.println(t);
+         System.out.println(t);
     }
     
 }
