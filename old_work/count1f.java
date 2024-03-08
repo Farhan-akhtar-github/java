@@ -1,10 +1,6 @@
-/**
- * arryissortedornot
- */
-public class arryissortedornot {
-
-    public static void main(String[] args) {
-    int arr[] = {0,0,0,1,1,1,0,1,1,1,1,1};
+public class Main {
+    public static void main (String[] args){
+        int arr[] = {0,0,0,1,1,1,0,1,1,1,1,1};
     int n= arr.length;
     int count=0;
     int res=0;
@@ -21,4 +17,5 @@ public class arryissortedornot {
     }
     System.out.println(res);
     }
+    
 }
