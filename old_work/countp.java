@@ -1,9 +1,10 @@
-public class count1f {
+public class countp {
     public static void main (String[] args){
-        int nums[] = {1,4,4,1,3,5,5,3};
-        int pattern[] = {1,0,-1};
+        int nums[] = {1,2,3,4,5,6,3,3,3,3,3,3,3,3};
+        int pattern[] = {1,1,2,1,1,1,2};
         int n= nums.length;
         int p= pattern.length;
+        int pa=p-1;
         int r=0;
         int number=0;
         int j=0;
@@ -24,9 +25,11 @@ public class count1f {
            }
            number=number*10+r;
         }
-        for (int i = 0; i < nums.length; i++) {
+        System.out.println(number);
+        for (int i = 0; i < nums.length-1; i++) {
             if(j>p){
-               j=0;
+                pnumber=0;
+               j=0;}
                if (nums[i] == nums[i+1]) {
                   pnumber=pnumber*10+1;
             } else if (nums[i] <nums[i+1]) {
@@ -34,10 +37,12 @@ public class count1f {
             } else if (nums[i] >nums[i+1]) {
                   pnumber=pnumber*10+3;
             }
-            
-            }
             j++;
-
+            if (pnumber==number) {
+                System.out.println(i-pa);
+                System.out.println(1+i);
+                
+            }
         }
         System.out.println(pnumber);
     
